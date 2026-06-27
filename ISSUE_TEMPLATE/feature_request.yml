@@ -1,0 +1,50 @@
+name: Solicitar melhoria
+description: Propor funcionalidade, automação ou melhoria operacional
+title: "[MELHORIA] "
+labels:
+  - enhancement
+body:
+  - type: textarea
+    id: objective
+    attributes:
+      label: Objetivo
+      description: Qual resultado de negócio ou técnico deve ser alcançado?
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Contexto e problema atual
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Escopo mínimo viável
+      description: Descreva a menor entrega que gera valor.
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Critérios de aceite
+      placeholder: |
+        - [ ] ...
+        - [ ] ...
+    validations:
+      required: true
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: Dependências e restrições
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Prioridade sugerida
+      options:
+        - P0 - Crítica
+        - P1 - Alta
+        - P2 - Média
+        - P3 - Baixa
+    validations:
+      required: true

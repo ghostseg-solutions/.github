@@ -1,0 +1,54 @@
+name: Relatar defeito
+description: Registrar comportamento incorreto de forma rastreável
+title: "[BUG] "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Não inclua senhas, tokens, chaves, dados pessoais ou vulnerabilidades. Para segurança, consulte SECURITY.md.
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problema
+      description: Descreva o comportamento observado.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Resultado esperado
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Passos para reproduzir
+      placeholder: |
+        1. ...
+        2. ...
+        3. ...
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Ambiente e versão
+      placeholder: sistema operacional, navegador, versão, commit ou ambiente
+  - type: dropdown
+    id: impact
+    attributes:
+      label: Impacto
+      options:
+        - Baixo
+        - Médio
+        - Alto
+        - Crítico
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidências sanitizadas
+      description: Logs ou capturas sem segredos nem dados pessoais.
